@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button button1;
     Button button2;
+    TextView tvClick;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         button1 = findViewById(R.id. button1);
         button2 = findViewById(R.id. button2);
+        tvClick = findViewById(R.id. tvClick);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +37,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ThirdActivity.class);
                 intent.putExtra("char", "a");
+                startActivity(intent);
+            }
+        });
+
+        tvClick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, FourthActivity.class);
+                intent.putExtra("double", 99.99);
                 startActivity(intent);
             }
         });
