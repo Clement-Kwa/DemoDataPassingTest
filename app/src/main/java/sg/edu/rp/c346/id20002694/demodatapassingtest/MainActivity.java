@@ -35,18 +35,18 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, ThirdActivity.class);
-                intent.putExtra("char", "a");
-                startActivity(intent);
+                Intent intent2 = new Intent(MainActivity.this, SecondActivity.class);
+                intent2.putExtra("char", 'a');
+                startActivity(intent2);
             }
         });
 
         tvClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, FourthActivity.class);
-                intent.putExtra("double", 99.99);
-                startActivity(intent);
+                Intent intent3 = new Intent(MainActivity.this, SecondActivity.class);
+                intent3.putExtra("double", 99.99);
+                startActivity(intent3);
             }
         });
 
